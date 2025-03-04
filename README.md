@@ -5,7 +5,11 @@
 
 ## Run
 ```
+// Build image
 $docker compose up -d --build
+
+// Create containers (worker = 5)
+$docker compose up -d --scale worker=5
 $docker compose ps        
 NAME                 IMAGE            COMMAND                  SERVICE   CREATED         STATUS                            PORTS
 demo-queue-app-1     demo-queue-app   "docker-entrypoint.s…"   app       7 seconds ago   Up 6 seconds (health: starting)   0.0.0.0:3000->3000/tcp
